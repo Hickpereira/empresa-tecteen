@@ -671,322 +671,14 @@ body.dark-mode i {
 
   /*fim footer*/
 
-
-  /* Responsividade */
-@media (max-width: 1024px) {
-  
-  section.mvv h1,
-  section.servico h1,
-  section.fale-conosco h1 {
-    font-size: 40px;
-    text-align: center;
-  }
-  
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-  }
-
-  header ul {
-    display: none;
-  }
-
-  .modo-dark {
-    margin: 0;
-  }
-
-  section.topo-site h1 {
-    font-size: 32px;
-    width: 100%;
-    
-    margin: 40px 20px 20px 20px;
-  }
-
-  .container-mvv {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 80px;
-  }
-
-  .container-mvv div{
-    text-align: center;
-  }
-
-  .container-servico {
-    width: 100%;
-    align-items: center;
-  }
-
-  section.servico {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  section.servico li{
-    margin-bottom: 100px;
-  }
-
-  section.servico img {
-    width: 90vw;
-    height: auto;
-    margin: 40px auto;
-  }
-
-  .container-quem-somos {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .integrante {
-    min-width: 200px;
-    padding: 20px;
-  }
-
-  .integrante:hover {
-    max-width: 280px;
-    min-height: 320px;
-  }
-
-  .text-quem-somos h1 {
-    font-size: 40px;
-    margin-bottom: 40px;
-  }
-
-  .container-quem-somos {
-    flex-direction: column;
-    gap: 20px;
-    padding: 0 20px;
-  }
-
-  .integrante {
-    min-width: 200px;
-    padding: 20px;
-    margin: 0 auto;
-  }
-
-  .descricao {
-    font-size: 13px;
-    max-width: 200px;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    padding: 0 3%;
-  }
-
-  section {
-    margin: 60px 0;
-    padding: 30px 0;
-  }
-
-  section.topo-site {
-    margin: 40px 0;
-  }
-
-  .container-mvv {
-    gap: 30px;
-    margin-bottom: 60px;
-  }
-
-  .container-servico {
-    gap: 15px;
-  }
-
-  .container-quem-somos {
-    gap: 15px;
-    padding: 0 15px;
-  }
-
-  .form-container {
-    gap: 15px;
-  }
-
-  .footer {
-    margin-top: -20px;
-    padding: 30px 0;
-  }
-
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-  }
-
-  header ul {
-    display: none;
-  }
-
-  .modo-dark {
-    margin: 0;
-    padding: 6px 12px;
-    font-size: 14px;
-  }
-
-  .text-motivacao h1 {
-    font-size: 28px;
-    text-align: center;
-    margin: 30px 15px 15px 15px;
-  }
-
-  section.topo-site img {
-    margin-top: 40px;
-    width: 100%;
-  }
-
-  .container-mvv p,
-  .container-servico p {
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .form-container {
-    width: 90%;
-  }
-
-  .footer-container {
-    align-items: center;
-    text-align: center;
-  }
-
-  .social-icons {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .text-quem-somos h1 {
-    font-size: 32px;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  .integrante {
-    min-width: 180px;
-    padding: 15px;
-    margin: 0 auto;
-  }
-
-  .integrante:hover {
-    max-width: 260px;
-    min-height: 300px;
-  }
-
-  .foto-integrante i {
-    font-size: 50px;
-  }
-
-  .descricao {
-    font-size: 12px;
-    max-width: 160px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding: 0 2%;
-  }
-
-  section {
-    margin: 40px 0;
-    padding: 20px 0;
-  }
-
-  section.topo-site {
-    margin: 30px 0;
-  }
-
-  .container-mvv {
-    gap: 25px;
-    margin-bottom: 50px;
-  }
-
-  .container-servico {
-    gap: 12px;
-  }
-
-  .container-quem-somos {
-    gap: 12px;
-    padding: 0 10px;
-  }
-
-  .form-container {
-    gap: 12px;
-  }
-
-  .footer {
-    margin-top: -15px;
-    padding: 25px 0;
-  }
-
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-
-  header ul {
-    display: none;
-  }
-
-  header img {
-    width: 200px;
-    height: 60px;
-  }
-
-  .modo-dark {
-    margin: 0;
-    padding: 5px 10px;
-    font-size: 12px;
-  }
-
-  section.topo-site h1,
-  section.mvv h1,
-  section.servico h1,
-  section.fale-conosco h1 {
-    font-size: 24px;
-    text-align: center;
-    margin: 20px 10px 10px 10px;
-  }
-
-  .text-quem-somos h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .container-mvv h2,
-  .container-servico h2 {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .btn_contato {
-    font-size: 12px;
-    padding: 8px 12px;
-  }
-
-  .integrante {
-    min-width: 140px;
-    padding: 12px;
-    margin: 0 auto;
-  }
-
   .integrante:hover {
     max-width: 200px;
     min-height: 280px;
   }
 
   .descricao {
-    font-size: 11px;
-    max-width: 140px;
+    font-size: 15px;
+    max-width: 200px;
   }
 
   .footer-container h4 {
@@ -1013,7 +705,7 @@ body.dark-mode i {
   .integrante p {
     font-size: 14px;
   }
-}
+
 
 /* Animações de entrada */
 .animate-on-scroll {
@@ -1055,7 +747,7 @@ body.dark-mode i {
 /* Aplicar animação aos integrantes */
 .integrante {
   animation: fadeInUp 0.8s ease forwards;
-  animation-delay: calc(var(--animation-order) * 0.2s);
+    animation-delay: calc(var(--animation-order) * 0.2s);
   opacity: 0;
 }
 
@@ -1064,41 +756,113 @@ body.dark-mode i {
 .integrante:nth-child(3) { --animation-order: 3; }
 .integrante:nth-child(4) { --animation-order: 4; }
 
-/* Responsividade específica para dispositivos médios */
-@media (min-width: 769px) and (max-width: 1024px) {
+
+/* -------------------- RESPONSIVIDADE -------------------- */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+ 
   header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
+   
+    text-align: center;
+    padding: 15px;
   }
 
-  header ul {
-    display: none;
+  header img {
+    width: 200px;
+    height: auto;
   }
 
-  .modo-dark {
-    margin: 0;
+  ul li {
+    margin: 10px;
+  }
+
+  section.topo-site {
+    flex-direction: column;
+    text-align: center;
   }
 
   section.topo-site h1 {
-    font-size: 36px;
-    text-align: center;
-    margin: 50px 30px 25px 30px;
+    font-size: 2.5rem;
   }
 
-  .container-quem-somos {
-    gap: 25px;
+  section.topo-site img {
+    width: 80%;
   }
 
-  .integrante {
-    min-width: 240px;
-    padding: 25px;
+  .container-mvv {
+    display: flex;
+    flex-direction: column; /* Coluna */
+    align-items: flex-start; /* Alinha à esquerda */
+    gap: 20px; /* Espaço entre os itens */
+  margin-left: 60px;
   }
 
-  .integrante:hover {
-    max-width: 300px;
-    min-height: 340px;
+  .servico img {
+    display: none;
+  }
+  .namu{
+    display: none;
+   }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+  body {
+    padding: 0 20px;
+  }
+
+  header {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  header img {
+    width: 160px;
+  }
+
+  ul li {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .btn_contato,
+  .modo-dark {
+    display: block;
+    margin: 10px auto;
+  }
+
+  section.topo-site h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+
+  section.topo-site img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .text-motivacao {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container-mvv {
+    padding: 0 10px;
   }
 }
 
+/* Telas muito pequenas (menores que 480px) */
+@media (max-width: 480px) {
+  header {
+    font-size: 12px;
+  }
+
+  header img {
+    width: 140px;
+  }
+
+  section.topo-site h1 {
+    font-size: 1.8rem;
+  }
+}
