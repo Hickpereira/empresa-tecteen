@@ -761,7 +761,14 @@ body.dark-mode i {
 
 /* Tablets e telas médias */
 @media (max-width: 1024px) {
- 
+  
+    .container-mvv,
+    section.fale-conosco,
+    section.servico {
+      width: 100%;
+      margin-left: 0;
+    }
+  
   header {
    
     text-align: center;
@@ -795,7 +802,7 @@ body.dark-mode i {
     flex-direction: column; /* Coluna */
     align-items: flex-start; /* Alinha à esquerda */
     gap: 20px; /* Espaço entre os itens */
-  margin-left: 60px;
+  margin-left: 30px;
   }
 
   .servico img {
