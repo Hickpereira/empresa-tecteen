@@ -805,6 +805,18 @@ body.dark-mode i {
   margin-left: 30px;
   }
 
+  
+  section.mvv h1 {
+    font-size: 40px;
+  }
+
+  
+
+section.servico h1 {
+    font-size: 40px;
+  }
+
+
   .servico img {
     display: none;
   }
