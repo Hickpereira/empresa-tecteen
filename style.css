@@ -329,19 +329,243 @@
     align-items: center;
     justify-content: center;
     margin: 100px 0;
-    padding: 50px 0;
+  padding: 80px 0;
     transition: all 0.3s ease;
   }
 
-  body.dark-mode section.quem-somos {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.01) 100%);
-  }
+/* estilo específico removido pelo usuário para dark-mode desta seção */
 
   .text-quem-somos h1 {
     font-size: 60px;
     margin-bottom: 60px;
+  text-align: center;
+  position: relative;
+  }
+
+
+  /* ===== Quem Somos - Grid Moderno ===== */
+  .qs-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 20px;
     text-align: center;
   }
+
+  .qs-subtitle {
+    color: rgb(65, 65, 65);
+    font-weight: 300;
+    font-size: 20px;
+    margin: -30px auto 30px;
+    max-width: 840px;
+  }
+
+  body.dark-mode .qs-subtitle {
+    color: #b0b0b0;
+  }
+
+  .qs-grid {
+    display: none;
+  }
+
+.qs-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 113, 33, 0.15);
+    border-radius: 18px;
+  padding: 32px 28px;
+  text-align: center;
+  box-shadow: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInUp 0.7s ease forwards;
+  will-change: transform;
+  align-items: center;
+  }
+
+  .qs-card:nth-child(1) { animation-delay: 0.08s; }
+  .qs-card:nth-child(2) { animation-delay: 0.18s; }
+  .qs-card:nth-child(3) { animation-delay: 0.28s; }
+  .qs-card:nth-child(4) { animation-delay: 0.38s; }
+
+  body.dark-mode .qs-card {
+    background: rgba(26, 26, 26, 0.65);
+    border: 1px solid rgba(255, 138, 61, 0.25);
+    box-shadow: 0 12px 30px rgba(255, 138, 61, 0.12);
+  }
+
+.qs-card::after, .qs-card::before { content: none; }
+
+.qs-card:hover {
+  transform: translateY(-6px);
+  box-shadow: none;
+}
+
+  .qs-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+    background: linear-gradient(145deg, #ff7121, #ff8a3d);
+  box-shadow: none;
+  }
+
+  .qs-icon i {
+    color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  display: block;
+  }
+
+  /* Dark mode fixes for icons */
+  body.dark-mode .qs-icon {
+    background: linear-gradient(145deg, #222, #2b2b2b);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 138, 61, 0.25);
+  }
+  body.dark-mode .qs-icon i { color: #ff8a3d; }
+  body.dark-mode .qs-nav i { color: #ffffff; }
+
+  .qs-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .qs-card p {
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  body.dark-mode .qs-card p {
+    color: #cfcfcf;
+  }
+
+  /* ===== Carousel ===== */
+  .qs-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .qs-viewport {
+    overflow: hidden;
+    width: 100%;
+  border-radius: 20px;
+  perspective: 800px;
+  }
+
+  .qs-track {
+    display: flex;
+  gap: 0;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+
+.qs-card[data-slide] {
+  flex: 0 0 100%;
+  min-width: 100%;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Título e texto maiores quando o slide ocupa 100% */
+  .qs-card h3 { font-size: 26px; margin-bottom: 10px; }
+.qs-card p { font-size: 18px; line-height: 1.7; max-width: 760px; margin: 0 auto; }
+
+.qs-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 113, 33, 0.3);
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  opacity: 0.95;
+  z-index: 2;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+.qs-nav:hover { transform: translateY(-50%) scale(1.05); background: #ffffff; box-shadow: 0 12px 28px rgba(255, 113, 33, 0.25); }
+.qs-prev { left: -80px; }
+.qs-next { right: -80px; }
+
+body.dark-mode .qs-nav { background: rgba(26, 26, 26, 0.9); color: #fff; border-color: rgba(255, 138, 61, 0.4); }
+body.dark-mode .qs-nav:hover { background: rgba(40, 40, 40, 1); box-shadow: 0 12px 28px rgba(255, 138, 61, 0.3); }
+
+  .qs-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+  }
+.qs-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, width 0.2s ease;
+}
+.qs-dots button[aria-selected="true"] { background: linear-gradient(90deg, #ff7121, #ff8a3d); transform: translateY(-1px); width: 26px; }
+body.dark-mode .qs-dots button { background: rgba(255, 138, 61, 0.25); }
+body.dark-mode .qs-dots button[aria-selected="true"] { background: linear-gradient(90deg, #ff8a3d, #ff7121); }
+
+  @media (max-width: 1024px) {
+  section.quem-somos { padding: 60px 0; }
+  .text-quem-somos h1 { font-size: 44px; margin-bottom: 40px; }
+  .qs-card h3 { font-size: 22px; }
+  .qs-card p { font-size: 16px; }
+  }
+
+  @media (max-width: 640px) {
+  section.quem-somos { padding: 50px 0; }
+  .text-quem-somos h1 { font-size: 36px; margin-bottom: 28px; }
+  .qs-card { padding: 24px 20px; }
+  .qs-card h3 { font-size: 20px; }
+  .qs-card p { font-size: 15px; }
+  .qs-prev { left: -12px; }
+  .qs-next { right: -12px; }
+  }
+
+  /* Dinâmica extra para títulos com ícones no Quem Somos */
+  .quem-somos h3 i {
+    margin-right: 8px;
+    font-size: 22px;
+    vertical-align: middle;
+  }
+
+  /* Microinterações nos cards do Quem Somos */
+  .quem-somos .integrante {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+  }
+
+  .quem-somos .integrante:active {
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  /* Animação em cascata nos cards do Quem Somos */
+  .quem-somos .integrante { opacity: 0; animation: fadeInUp 0.8s ease forwards; }
+  .quem-somos .integrante:nth-child(1) { animation-delay: 0.1s; }
+  .quem-somos .integrante:nth-child(2) { animation-delay: 0.25s; }
+  .quem-somos .integrante:nth-child(3) { animation-delay: 0.4s; }
+  .quem-somos .integrante:nth-child(4) { animation-delay: 0.55s; }
 
   .container-quem-somos {
     display: flex;
@@ -805,6 +1029,18 @@ body.dark-mode i {
   margin-left: 30px;
   }
 
+  section.mvv h1 {
+    font-size: 40px;
+  }
+
+  
+
+section.servico h1 {
+    font-size: 40px;
+  }
+
+  
+
   .servico img {
     display: none;
   }
@@ -857,6 +1093,7 @@ body.dark-mode i {
   .container-mvv {
     padding: 0 10px;
   }
+  .qs-nav { display: none; }
 }
 
 /* Telas muito pequenas (menores que 480px) */
